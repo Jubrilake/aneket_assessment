@@ -6,7 +6,7 @@ const Header = () => {
     <header className="bg-background border-b">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold">
-          User Directory
+          Home
         </Link>
         <ModeToggle />
       </div>
