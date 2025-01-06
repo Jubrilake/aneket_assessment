@@ -1,6 +1,5 @@
-import Link from 'next/link'
-
-
+import Link from "next/link";
+import { ModeToggle } from "./ModeToggle";
 
 const Header = () => {
   return (
@@ -9,10 +8,10 @@ const Header = () => {
         <Link href="/" className="text-2xl font-bold">
           User Directory
         </Link>
-     
+        <ModeToggle />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
