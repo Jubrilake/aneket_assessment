@@ -54,7 +54,7 @@ export default async function UserPage({ params }: { params: { id: string } }) {
             <h3 className="font-semibold mb-2">Company</h3>
             <Badge variant="secondary">{user.company.name}</Badge>
             <p className="mt-2">
-              <em>&ldquo{user.company.catchPhrase}rdquo</em>
+              <em>&ldquo;{user.company.catchPhrase}&rdquo;</em>
             </p>
           </div>
           <div>
