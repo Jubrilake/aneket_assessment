@@ -10,6 +10,15 @@ import {
 import { Button } from "@/components/ui/button";
 import { InsightCards } from "./layout/InsightCards";
 
+interface User {
+  id: string; // or number if applicable
+  name: string;
+  email: string;
+  company: {
+    name: string;
+  };
+}
+
 async function getUsers() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   if (!res.ok) {
@@ -25,6 +34,7 @@ export default async function Home() {
   // eslint-disable-next-line  @typescript-eslint/no-explicit-any
   const totalCompanies = new Set(users.map((user: any) => user.company.name))
     .size;
+  // eslint-disable-next-line  @typescript-eslint/no-explicit-any
   const totalCities = new Set(users.map((user: any) => user.address.city)).size;
 
   return (
@@ -46,8 +56,9 @@ export default async function Home() {
             <TableHead>Action</TableHead>
           </TableRow>
         </TableHeader>
+
         <TableBody>
-          {users.map((user: any) => (
+          {users.map((user: User) => (
             <TableRow key={user.id}>
               <TableCell className="font-medium">{user.name}</TableCell>
               <TableCell>{user.email}</TableCell>
