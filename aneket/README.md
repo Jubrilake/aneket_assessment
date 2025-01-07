@@ -52,18 +52,19 @@ The project is organized to ensure scalability and maintainability:
 
 ```
 /app
-  /components
-    /ui
-      Button.tsx
-      Card.tsx
-      Dropdown.tsx
     /layout
       Footer.tsx
       Header.tsx
       UserDetailedCard.tsx
-  /user
+    /user
     /[id]
       page.tsx
+/components
+   /ui
+      Button.tsx
+      Card.tsx
+      Dropdown.tsx
+   
 ```
 
 ### Key Folders
